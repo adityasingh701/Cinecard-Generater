@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CineCard Generator</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</head>
+<body>
+  <h1>🎬 Generate Your CineCard</h1>
+  <input type="text" id="nameInput" placeholder="Your Name" />
+  <select id="genreSelect">
+    <option value="Action">Action</option>
+    <option value="Horror">Horror</option>
+    <option value="Comedy">Comedy</option>
+    <option value="Drama">Drama</option>
+    <option value="Sci-Fi">Sci-Fi</option>
+  </select>
+  <br>
+  <button class="action-btn" onclick="generateCard()">🎫 Create CineCard</button>
+
+
+  <div id="cinecard" style="display:none;">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/1/13/Cinema_theatre_icon.svg" class="logo" />
+    <h2>CineCard: Official Movie Identity</h2>
+    <p><strong>👤 Name:</strong> <span id="cardName"></span></p>
+    <p><strong>🎭 Genre:</strong> <span id="cardGenre"></span></p>
+    <p><strong>🎥 Movie:</strong> <span id="cardMovie"></span></p>
+    <p><strong>🔥 Tagline:</strong> <span id="cardTagline"></span></p>
+    <div id="cinehall-brand">🔒 Certified by The CineHall Universe</div>
+  </div>
+
+
+  <div id="buttons" style="display:none;">
+    <button class="action-btn" onclick="downloadCard()">⬇️ Download CineCard</button>
+    <button class="action-btn" id="shareBtn" onclick="shareCard()">📲 Share CineCard</button>
+  </div>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
+
